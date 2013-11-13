@@ -33,8 +33,8 @@
     "browser": [
       "ie8", "ie9", "ie10",
       "ff/15", "ff/20", "ff/23", "ff/nightly",
-      "chrome/31",
-      "opera/17",
+      "chrome/29", "chrome/canary",
+      "opera/15", "opera/next",
       "safari/5.1"
     ]
   },
