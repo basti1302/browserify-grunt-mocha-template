@@ -1,0 +1,32 @@
+{
+  "name": "mymodule",
+  "version": "0.0.0",
+  "author": "Bastian Krol",
+  "description": "example project template for a cross platform (node and browser) javascript code",
+  "repository": "none yet",
+  "main": "./mymodule",
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "~2.35.1",
+    "chai": "~1.8.1",
+    "express": "~3.4.4",
+    "grunt": "~0.4.1",
+    "grunt-browserify": "~1.2.11",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-jshint": "~0.7.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-mocha-phantomjs": "~0.3.1",
+    "grunt-mocha-test": "~0.7.0",
+    "mocha": "~1.14.0",
+    "request": "~2.27.0",
+    "sinon": "~1.7.3",
+    "sinon-chai": "~2.4.0",
+    "watchify": "~0.3.0"
+  },
+  "browser": {
+    "util": "./browser/lib/shim/node-util.js"
+  },
+  "engines": {
+    "node": ">= 0.10.x"
+  }
+}

@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Browserify Example With RequireJS</title>
+    <script src="lib/require.js"></script>
+  </head>
+  <body>
+    <p><span id="q1">7 + 5 =</span> <span id="a1">???</span></p>
+    <p><span id="q2">6 * 7 =</span> <span id="a2">???</span></p>
+    <p>If you see the result on the right side of the equations, everything
+    worked fine. If you see question marks, something went wrong.</p>
+    <script>
+      require(['../dist/mymodule.standalone'], function(main) {
+        document.getElementById('a1').innerHTML = main.add(7, 5)
+        document.getElementById('a2').innerHTML = main.mult(6, 7)
+      })
+    </script>
+  </body>
+</html>
