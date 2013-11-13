@@ -36,7 +36,9 @@
       "chrome/29", "chrome/canary",
       "opera/15", "opera/next",
       "safari/5.1"
-    ]
+    ],
+    "harness": "mocha",
+    "files": "test/*.js"
   },
   "engines": {
     "node": ">= 0.10.x"
