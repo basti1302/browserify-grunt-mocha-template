@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "author": "Bastian Krol",
   "description": "example project template for a cross platform (node and browser) javascript module",
-  "repository": "https://github.com/basti1302/browserify-grunt-mocha.git",
+  "repository": "https://github.com/basti1302/browserify-grunt-mocha-template.git",
   "scripts": {
     "test": "grunt"
   },
