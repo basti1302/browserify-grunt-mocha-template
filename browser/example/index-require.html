@@ -10,7 +10,7 @@
     <p>If you see the result on the right side of the equations, everything
     worked fine. If you see question marks, something went wrong.</p>
     <script>
-      require(['../dist/mymodule.standalone'], function(main) {
+      require(['../dist/mymodule.standalone.min'], function(main) {
         document.getElementById('a1').innerHTML = main.add(7, 5)
         document.getElementById('a2').innerHTML = main.mult(6, 7)
       })

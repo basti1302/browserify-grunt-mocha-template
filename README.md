@@ -49,6 +49,5 @@ Remark: The Gruntfile uses grunt-browserify to browserify the module and the tes
 TODO
 ----
 
-* Minifiy the browser builds with uglify JS and use this in the example and test HTML
 * Integrate testling-ci
 * Provide links to related work in README.md

@@ -21,7 +21,7 @@ exports.mult = function(a, b) {
   }
 }
 
-},{"util":1}],"wzae2y":[function(require,module,exports){
+},{"util":1}],"ktcxVp":[function(require,module,exports){
 var helper = require('./lib/helper')
 
 module.exports = {
@@ -36,7 +36,7 @@ module.exports = {
   }
 }
 
-},{"./lib/helper":2}],"/home/bastian/projekte/grunt-browserify-mocha/mymodule.js":[function(require,module,exports){
-module.exports=require('wzae2y');
-},{}]},{},["wzae2y"])
+},{"./lib/helper":2}],"/home/bastian/projekte/browserify-grunt-mocha-template/mymodule.js":[function(require,module,exports){
+module.exports=require('ktcxVp');
+},{}]},{},["ktcxVp"])
 ;

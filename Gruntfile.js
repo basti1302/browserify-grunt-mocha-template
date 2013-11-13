@@ -86,6 +86,18 @@ module.exports = function(grunt) {
       }
     },
 
+    // Uglify browser libs
+    uglify: {
+      standalone: {
+        files: {
+          'browser/dist/<%= pkg.name %>.standalone.min.js':
+              ['<%= browserify.standalone.dest %>'],
+          'browser/dist/<%= pkg.name %>.require.min.js':
+              ['<%= browserify.require.dest %>']
+        }
+      }
+    },
+
     // run the mocha tests in the browser via PhantomJS
     'mocha_phantomjs': {
       all: {
@@ -107,6 +119,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint')
   grunt.loadNpmTasks('grunt-mocha-test')
   grunt.loadNpmTasks('grunt-browserify')
+  grunt.loadNpmTasks('grunt-contrib-uglify')
   grunt.loadNpmTasks('grunt-mocha-phantomjs')
   grunt.loadNpmTasks('grunt-contrib-watch')
 
@@ -183,6 +196,7 @@ module.exports = function(grunt) {
     'mochaTest',
     'clean',
     'browserify',
+    'uglify',
     'start-test-server',
     'mocha_phantomjs',
     'stop-test-server'
