@@ -7,6 +7,8 @@ return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requi
  * how to shim an npm dependency for browserify, we shim it nonetheless.
  */
 
+'use strict';
+
 module.exports = function(filename, pattern) {
   pattern = pattern.replace('.', '\\.')
   pattern = pattern.replace('*', '.*')
@@ -21,6 +23,15 @@ module.exports = function(filename, pattern) {
  */
 
 },{}],2:[function(require,module,exports){
+/*
+ * A (very basic) shim for node's util module. Only the functionality actualy
+ * used in mymodule is shimmed. Actually, it is not necessary to shim the core
+ * node modules at all because browserify provides shims for most of them.
+ * Sometimes it can still be a good idea to shim a node core module yourself if
+ * you only use a small fraction of it's functionality which is easy to shim,
+ * because this will reduce the size of the browserified file.
+ */
+
 'use strict';
 
 module.exports = {

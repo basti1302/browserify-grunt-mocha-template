@@ -5,6 +5,8 @@
  * how to shim an npm dependency for browserify, we shim it nonetheless.
  */
 
+'use strict';
+
 module.exports = function(filename, pattern) {
   pattern = pattern.replace('.', '\\.')
   pattern = pattern.replace('*', '.*')
