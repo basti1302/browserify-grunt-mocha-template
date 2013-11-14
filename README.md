@@ -24,23 +24,23 @@ What Does This Project Template Offer?
 
 This project template uses browserify to convert the CommonJS code to browser compatible code. It comes with a rather complete setup, including:
 * A tiny example module with
-    * custom dependencies and
-    * a dependency on a node core module
+    * a dependency on a module from npm
+    * a dependency on a node core modul
+    * inter-module dependencies (relative requires)
+    * a package.json file that shows how to shim dependencies for browserify via the `browser` property (making browserify use substitutes instead of the original node dependencies)
 * Mocha tests for the module to verify that the module works correctly in Node.js
 * An HTML test runner to also run the same Mocha tests (browserified) in any browser
-* A tiny express server to serve the static assets needed to run the Mocha tests in a browser
 * A shell script to browserify the module and the tests _without_ Grunt
 * Example HTML pages that demonstrate how to include the browserified module in other projects
     * by using a simple script tag
     * by requiring as a dependency with RequireJS
     * by requiring it as an external dependency from another browserified module
 * A Gruntfile, that
-    * lints the sources with JSHint
-    * runs the Mocha tests via Node.js
-    * browserifies the module and the tests
-    * Starts the express server
-    * Runs the same Mocha tests as before, this time in a PhantomJS browser via grunt-mocha-phantomjs, using the same HTML test harness that can be used to run the tests manually in any browser
-    * Stops the test server when tests are finished
+    * lints the sources with JSHint,
+    * runs the Mocha tests via Node.js,
+    * browserifies the module and the tests,
+    * starts a server to serve the static assets (test runner html, browserified code) to the browser,
+    * runs the same Mocha tests as before, this time in a PhantomJS browser via grunt-mocha-phantomjs, using the same HTML test harness that can be used to run the tests manually in any browser
 
 This infrastructure is a good starting point for writing cross platform (Node.js and browser) JavaScript code.
 
@@ -49,5 +49,4 @@ Remark: The Gruntfile uses grunt-browserify to browserify the module and the tes
 TODO
 ----
 
-* Use grunt-contrib-connect instead of express server
 * Provide links to related work in README.md

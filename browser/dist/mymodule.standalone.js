@@ -1,5 +1,26 @@
 !function(e){"object"==typeof exports?module.exports=e():"function"==typeof define&&define.amd?define(e):"undefined"!=typeof window?window.mymodule=e():"undefined"!=typeof global?global.mymodule=e():"undefined"!=typeof self&&(self.mymodule=e())}(function(){var define,module,exports;
 return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+/*
+ * An extremely lame shim for the minimatch module.
+ * Actually, shimming minimatch doesn't even make sense. It would probably
+ * browserify well at a reasonable file size, but since this is to demonstrate
+ * how to shim an npm dependency for browserify, we shim it nonetheless.
+ */
+
+module.exports = function(filename, pattern) {
+  pattern = pattern.replace('.', '\\.')
+  pattern = pattern.replace('*', '.*')
+  pattern = '^' + pattern + '$'
+  var re = new RegExp(pattern, 'g')
+  return re.test(filename)
+}
+
+/*
+ * We don't even bother to shim minimatch.filter, minimatch.match or any other
+ * methods minimatch might offer, since they are not used in our module.
+ */
+
+},{}],2:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -11,7 +32,7 @@ module.exports = {
   }
 }
 
-},{}],2:[function(require,module,exports){
+},{}],3:[function(require,module,exports){
 var util = require('util')
 
 exports.mult = function(a, b) {
@@ -22,22 +43,31 @@ exports.mult = function(a, b) {
   }
 }
 
-},{"util":1}],3:[function(require,module,exports){
+},{"util":2}],4:[function(require,module,exports){
+var minimatch = require('minimatch')
+
 var helper = require('./lib/helper')
 
 module.exports = {
+
   add: function(a, b) {
     return a + b
   },
+
   mult: function(a, b) {
     return helper.mult(a, b)
   },
+
+  isJs: function(filename) {
+    return minimatch(filename, '*.js')
+  },
+
   callCallback: function(cb) {
     return cb(1302)
   }
 }
 
-},{"./lib/helper":2}]},{},[3])
-(3)
+},{"./lib/helper":3,"minimatch":1}]},{},[4])
+(4)
 });
 ;

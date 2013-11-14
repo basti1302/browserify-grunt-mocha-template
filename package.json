@@ -8,26 +8,27 @@
     "test": "grunt"
   },
   "main": "./mymodule",
-  "dependencies": {},
+  "dependencies": {
+    "minimatch": "~0.2.12"
+  },
   "devDependencies": {
     "browserify": "~2.35.1",
     "chai": "~1.8.1",
-    "express": "~3.4.4",
     "grunt": "~0.4.1",
     "grunt-browserify": "~1.2.11",
     "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-connect": "~0.5.0",
     "grunt-contrib-jshint": "~0.7.1",
     "grunt-contrib-uglify": "~0.2.7",
     "grunt-contrib-watch": "~0.5.3",
     "grunt-mocha-phantomjs": "~0.3.1",
     "grunt-mocha-test": "~0.7.0",
     "mocha": "~1.14.0",
-    "request": "~2.27.0",
     "sinon": "~1.7.3",
-    "sinon-chai": "~2.4.0",
-    "watchify": "~0.3.0"
+    "sinon-chai": "~2.4.0"
   },
   "browser": {
+    "minimatch": "./browser/lib/shim/minimatch.js",
     "util": "./browser/lib/shim/node-util.js"
   },
   "testling": {
