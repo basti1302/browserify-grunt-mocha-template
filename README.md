@@ -49,5 +49,5 @@ Remark: The Gruntfile uses grunt-browserify to browserify the module and the tes
 TODO
 ----
 
-* Integrate testling-ci
+* Use grunt-contrib-connect instead of express server
 * Provide links to related work in README.md
