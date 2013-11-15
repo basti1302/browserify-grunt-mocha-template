@@ -4,6 +4,8 @@ Cross platform JavaScript npm module project template
 [![Build Status](https://travis-ci.org/basti1302/browserify-grunt-mocha-template.png?branch=master)](https://travis-ci.org/basti1302/browserify-grunt-mocha-template)
 [![Dependency Status](https://david-dm.org/basti1302/browserify-grunt-mocha-template.png)](https://david-dm.org/basti1302/browserify-grunt-mocha-template)
 
+[![browser support](http://ci.testling.com/basti1302/browserify-grunt-mocha-template.png)](http://ci.testling.com/basti1302/browserify-grunt-mocha-template)
+
 What?
 -------------
 
