@@ -1,9 +1,9 @@
 var myModule = require('../mymodule')
 
 var chai = require('chai')
+var expect = chai.expect
 var sinon = require('sinon')
 var sinonChai = require('sinon-chai')
-chai.should()
 chai.use(sinonChai)
 
 describe('My browserified tests', function() {
@@ -21,14 +21,14 @@ describe('My browserified tests', function() {
   })
 
   it('should use chai coz it\'s so tasty', function() {
-    myModule.add(2, 3).should.equal(5)
-    myModule.mult(6, 7).should.equal(42)
+    expect(myModule.add(2, 3)).to.equal(5)
+    expect(myModule.mult(6, 7)).to.equal(42)
   })
 
   it('should also use sinon and sinonChai', function() {
     var stub = sinon.stub()
     myModule.callCallback(stub)
-    stub.should.have.been.called
-    stub.firstCall.args[0].should.equal(1302)
+    expect(stub).to.have.been.called
+    expect(stub.firstCall.args[0]).to.equal(1302)
   })
 })

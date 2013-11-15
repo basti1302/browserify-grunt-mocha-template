@@ -1,7 +1,7 @@
 var myModule = require('../mymodule')
 
 var chai = require('chai')
-chai.should()
+var expect = chai.expect
 
 describe('Just another test', function() {
   it('that runs asynchronously', function(done) {
@@ -11,6 +11,6 @@ describe('Just another test', function() {
   })
 
   it('which uses shimmed functionality', function() {
-    myModule.isJs('mymodule.js').should.be.true
+    expect(myModule.isJs('mymodule.js')).to.be.true
   })
 })
