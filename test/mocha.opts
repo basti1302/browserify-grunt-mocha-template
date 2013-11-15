@@ -1,0 +1,3 @@
+--recursive
+--slow 200
+--timeout 500
