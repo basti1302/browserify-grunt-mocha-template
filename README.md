@@ -50,3 +50,8 @@ This project template uses browserify to convert the CommonJS code to browser co
 This infrastructure is a good starting point for writing cross platform (Node.js and browser) JavaScript code.
 
 Remark: The Gruntfile uses grunt-browserify to browserify the module and the tests and it actually kicks off three browserify builds. For a small module like this, the turnaround time is still good enought. For a larger module, watchify might be a better (faster) alternative.
+
+License
+-------
+
+MIT
