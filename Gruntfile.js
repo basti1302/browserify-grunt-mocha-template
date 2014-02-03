@@ -94,9 +94,8 @@ module.exports = function(grunt) {
 
     connect: {
       // Used for mocha-phantomjs tests
-      server: {
-        options: {}
-      },
+      server: {},
+
       // you can use this manually by doing
       // grunt connect:keepalive
       // to start a server for the example pages (browser/example/*.html) or to
