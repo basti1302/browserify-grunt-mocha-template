@@ -2,11 +2,9 @@
 
 var serverRootUri = 'http://127.0.0.1:8000'
 var mochaPhantomJsTestRunner = serverRootUri + '/browser/test/index.html'
-var serverWasAlreadyRunning = false
 
 /* jshint -W106 */
 module.exports = function(grunt) {
-
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -17,7 +15,8 @@ module.exports = function(grunt) {
         'Gruntfile.js',
         '!node_modules/**/*',
         '!browser/example/lib/**/*',
-        '!browser/dist/**/*'
+        '!browser/dist/**/*',
+        '!browser/test/**/*',
       ],
       options: {
         jshintrc: '.jshintrc'
@@ -36,7 +35,8 @@ module.exports = function(grunt) {
 
     // remove all previous browserified builds
     clean: {
-      dist: ['./browser/dist/**/*']
+      dist: ['./browser/dist/**/*'],
+      tests: ['./browser/test/browserified_tests.js']
     },
 
     // browserify everything
@@ -71,7 +71,7 @@ module.exports = function(grunt) {
       // sinon-chai but must not include the module under test.
       tests: {
         src: [ 'browser/test/suite.js' ],
-        dest: './browser/dist/browserified_tests.js',
+        dest: './browser/test/browserified_tests.js',
         options: {
           external: [ './<%= pkg.name %>.js' ],
           // Embed source map for tests
