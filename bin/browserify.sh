@@ -36,7 +36,7 @@ browserify \
 # sinon-chai but must not include the module under test.
 browserify \
   --entry browser/test/suite.js \
-  --outfile browser/dist/browserified_tests.js \
+  --outfile browser/test/browserified_tests.js \
   --external ./mymodule.js
 
 popd > /dev/null
