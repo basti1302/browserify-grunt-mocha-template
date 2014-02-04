@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# This script is just provided to show how to invoke browserify without using
+# Grunt. When using Grunt, everything is handled in Gruntfile.js and this script
+# is not needed.
+
 # Script to browserify without Grunt
 # This script assumes that browserify is installed globally. If that is not the
 # case, one could also use the command
