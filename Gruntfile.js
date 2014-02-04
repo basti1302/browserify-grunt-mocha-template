@@ -1,7 +1,7 @@
 'use strict';
 
-var serverRootUri = 'http://127.0.0.1:8000'
-var mochaPhantomJsTestRunner = serverRootUri + '/browser/test/index.html'
+var serverRootUri = 'http://127.0.0.1:8000';
+var mochaPhantomJsTestRunner = serverRootUri + '/browser/test/index.html';
 
 /* jshint -W106 */
 module.exports = function(grunt) {
@@ -36,7 +36,7 @@ module.exports = function(grunt) {
     // remove all previous browserified builds
     clean: {
       dist: ['./browser/dist/**/*'],
-      tests: ['./browser/test/browserified_tests.js']
+      tests: ['./browser/test/browserified_tests.js'],
     },
 
     // browserify everything
@@ -87,7 +87,7 @@ module.exports = function(grunt) {
           'browser/dist/<%= pkg.name %>.standalone.min.js':
               ['<%= browserify.standalone.dest %>'],
           'browser/dist/<%= pkg.name %>.require.min.js':
-              ['<%= browserify.require.dest %>']
+              ['<%= browserify.require.dest %>'],
         }
       }
     },
@@ -122,16 +122,16 @@ module.exports = function(grunt) {
       files: ['<%= jshint.files %>'],
       tasks: ['default']
     },
-  })
+  });
 
-  grunt.loadNpmTasks('grunt-contrib-clean')
-  grunt.loadNpmTasks('grunt-contrib-jshint')
-  grunt.loadNpmTasks('grunt-mocha-test')
-  grunt.loadNpmTasks('grunt-browserify')
-  grunt.loadNpmTasks('grunt-contrib-uglify')
-  grunt.loadNpmTasks('grunt-contrib-connect')
-  grunt.loadNpmTasks('grunt-mocha-phantomjs')
-  grunt.loadNpmTasks('grunt-contrib-watch')
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-mocha-test');
+  grunt.loadNpmTasks('grunt-browserify');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-mocha-phantomjs');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', [
     'jshint',
@@ -141,6 +141,6 @@ module.exports = function(grunt) {
     'uglify',
     'connect:server',
     'mocha_phantomjs'
-  ])
-}
+  ]);
+};
 /* jshint +W106 */

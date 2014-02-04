@@ -1,5 +1,5 @@
 {
-  "asi": true,
+  "asi": false,
   "bitwise": true,
   "boss": true,
   "camelcase": true,

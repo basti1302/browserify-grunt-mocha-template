@@ -8,12 +8,12 @@
 'use strict';
 
 module.exports = function(filename, pattern) {
-  pattern = pattern.replace('.', '\\.')
-  pattern = pattern.replace('*', '.*')
-  pattern = '^' + pattern + '$'
-  var re = new RegExp(pattern, 'g')
-  return re.test(filename)
-}
+  pattern = pattern.replace('.', '\\.');
+  pattern = pattern.replace('*', '.*');
+  pattern = '^' + pattern + '$';
+  var re = new RegExp(pattern, 'g');
+  return re.test(filename);
+};
 
 /*
  * We don't even bother to shim minimatch.filter, minimatch.match or any other

@@ -4,6 +4,6 @@
 
 // You don't need to run this script when executing grunt because grunt starts
 // the server itself.
-var testServer = require('../server/app')
-testServer.start()
+var testServer = require('../server/app');
+testServer.start();
 

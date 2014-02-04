@@ -9,12 +9,12 @@ require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requ
 'use strict';
 
 module.exports = function(filename, pattern) {
-  pattern = pattern.replace('.', '\\.')
-  pattern = pattern.replace('*', '.*')
-  pattern = '^' + pattern + '$'
-  var re = new RegExp(pattern, 'g')
-  return re.test(filename)
-}
+  pattern = pattern.replace('.', '\\.');
+  pattern = pattern.replace('*', '.*');
+  pattern = '^' + pattern + '$';
+  var re = new RegExp(pattern, 'g');
+  return re.test(filename);
+};
 
 /*
  * We don't even bother to shim minimatch.filter, minimatch.match or any other
@@ -36,46 +36,46 @@ module.exports = function(filename, pattern) {
 module.exports = {
   isArray: function(o) {
     if (o == null) {
-      return false
+      return false;
     }
-    return Object.prototype.toString.call(o) === '[object Array]'
+    return Object.prototype.toString.call(o) === '[object Array]';
   }
-}
+};
 
 },{}],3:[function(require,module,exports){
-var util = require('util')
+var util = require('util');
 
 exports.mult = function(a, b) {
   if (util.isArray([])) {
-    return a * b
+    return a * b;
   } else {
-    return -666
+    return -666;
   }
-}
+};
 
 },{"util":2}],"ktcxVp":[function(require,module,exports){
-var minimatch = require('minimatch')
+var minimatch = require('minimatch');
 
-var helper = require('./lib/helper')
+var helper = require('./lib/helper');
 
 module.exports = {
 
   add: function(a, b) {
-    return a + b
+    return a + b;
   },
 
   mult: function(a, b) {
-    return helper.mult(a, b)
+    return helper.mult(a, b);
   },
 
   isJs: function(filename) {
-    return minimatch(filename, '*.js')
+    return minimatch(filename, '*.js');
   },
 
   callCallback: function(cb) {
-    return cb(1302)
+    return cb(1302);
   }
-}
+};
 
 },{"./lib/helper":3,"minimatch":1}],"/home/bastian/projekte/browserify-grunt-mocha-template/mymodule.js":[function(require,module,exports){
 module.exports=require('ktcxVp');
