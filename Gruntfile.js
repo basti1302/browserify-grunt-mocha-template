@@ -16,7 +16,7 @@ module.exports = function(grunt) {
         '!node_modules/**/*',
         '!browser/example/lib/**/*',
         '!browser/dist/**/*',
-        '!browser/test/**/*',
+        '!browser/test/browserified_tests.js',
       ],
       options: {
         jshintrc: '.jshintrc'
