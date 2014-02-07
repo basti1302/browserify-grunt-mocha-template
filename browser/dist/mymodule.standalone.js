@@ -1,5 +1,9 @@
-!function(e){"object"==typeof exports?module.exports=e():"function"==typeof define&&define.amd?define(e):"undefined"!=typeof window?window.mymodule=e():"undefined"!=typeof global?global.mymodule=e():"undefined"!=typeof self&&(self.mymodule=e())}(function(){var define,module,exports;
-return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+!function(e){if("object"==typeof exports)module.exports=e();else if("function"==typeof define&&define.amd)define(e);else{var f;"undefined"!=typeof window?f=window:"undefined"!=typeof global?f=global:"undefined"!=typeof self&&(f=self),f.mymodule=e()}}(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(_dereq_,module,exports){
+exports.echo = function(str) {
+  return 'browser says: ' + str;
+};
+
+},{}],2:[function(_dereq_,module,exports){
 /*
  * An extremely lame shim for the minimatch module.
  * Actually, shimming minimatch doesn't even make sense. It would probably
@@ -22,7 +26,7 @@ module.exports = function(filename, pattern) {
  * methods minimatch might offer, since they are not used in our module.
  */
 
-},{}],2:[function(require,module,exports){
+},{}],3:[function(_dereq_,module,exports){
 /*
  * A (very basic) shim for node's util module. Only the functionality actualy
  * used in mymodule is shimmed. Actually, it is not necessary to shim the core
@@ -43,8 +47,8 @@ module.exports = {
   }
 };
 
-},{}],3:[function(require,module,exports){
-var util = require('util');
+},{}],4:[function(_dereq_,module,exports){
+var util = _dereq_('util');
 
 exports.mult = function(a, b) {
   if (util.isArray([])) {
@@ -54,10 +58,11 @@ exports.mult = function(a, b) {
   }
 };
 
-},{"util":2}],4:[function(require,module,exports){
-var minimatch = require('minimatch');
+},{"util":3}],5:[function(_dereq_,module,exports){
+var minimatch = _dereq_('minimatch');
 
-var helper = require('./lib/helper');
+var helper = _dereq_('./lib/helper');
+var echo = _dereq_('./lib/echo');
 
 module.exports = {
 
@@ -75,10 +80,13 @@ module.exports = {
 
   callCallback: function(cb) {
     return cb(1302);
-  }
+  },
+
+  echo: function(str) {
+    return echo.echo(str);
+  },
 };
 
-},{"./lib/helper":3,"minimatch":1}]},{},[4])
-(4)
+},{"./lib/echo":1,"./lib/helper":4,"minimatch":2}]},{},[5])
+(5)
 });
-;

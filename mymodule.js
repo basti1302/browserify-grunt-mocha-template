@@ -1,6 +1,7 @@
 var minimatch = require('minimatch');
 
 var helper = require('./lib/helper');
+var echo = require('./lib/echo');
 
 module.exports = {
 
@@ -18,5 +19,9 @@ module.exports = {
 
   callCallback: function(cb) {
     return cb(1302);
-  }
+  },
+
+  echo: function(str) {
+    return echo.echo(str);
+  },
 };
