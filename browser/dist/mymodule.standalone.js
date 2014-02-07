@@ -63,6 +63,7 @@ var minimatch = _dereq_('minimatch');
 
 var helper = _dereq_('./lib/helper');
 var echo = _dereq_('./lib/echo');
+var optional = _dereq_('./lib/optional');
 
 module.exports = {
 
@@ -85,8 +86,14 @@ module.exports = {
   echo: function(str) {
     return echo.echo(str);
   },
+
+  useOptional: function() {
+    return optional.optional();
+  },
 };
 
-},{"./lib/echo":1,"./lib/helper":4,"minimatch":2}]},{},[5])
+},{"./lib/echo":1,"./lib/helper":4,"./lib/optional":6,"minimatch":2}],6:[function(_dereq_,module,exports){
+
+},{}]},{},[5])
 (5)
 });

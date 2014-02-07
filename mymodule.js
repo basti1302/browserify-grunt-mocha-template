@@ -2,6 +2,7 @@ var minimatch = require('minimatch');
 
 var helper = require('./lib/helper');
 var echo = require('./lib/echo');
+var optional = require('./lib/optional');
 
 module.exports = {
 
@@ -23,5 +24,9 @@ module.exports = {
 
   echo: function(str) {
     return echo.echo(str);
+  },
+
+  useOptional: function() {
+    return optional.optional();
   },
 };

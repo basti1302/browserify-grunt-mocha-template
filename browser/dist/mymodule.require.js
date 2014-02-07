@@ -63,6 +63,7 @@ var minimatch = require('minimatch');
 
 var helper = require('./lib/helper');
 var echo = require('./lib/echo');
+var optional = require('./lib/optional');
 
 module.exports = {
 
@@ -85,8 +86,14 @@ module.exports = {
   echo: function(str) {
     return echo.echo(str);
   },
+
+  useOptional: function() {
+    return optional.optional();
+  },
 };
 
-},{"./lib/echo":1,"./lib/helper":4,"minimatch":2}],"/home/bastian/projekte/browserify-grunt-mocha-template/mymodule.js":[function(require,module,exports){
+},{"./lib/echo":1,"./lib/helper":4,"./lib/optional":7,"minimatch":2}],"/home/bastian/projekte/browserify-grunt-mocha-template/mymodule.js":[function(require,module,exports){
 module.exports=require('ktcxVp');
+},{}],7:[function(require,module,exports){
+
 },{}]},{},["ktcxVp"])
