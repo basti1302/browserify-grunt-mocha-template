@@ -33,7 +33,7 @@ This project template uses browserify to convert the CommonJS code to browser co
     * a dependency on a node core modul (`util`, in this case),
     * inter-module dependencies (relative requires)
     * a package.json file that shows how to shim dependencies for browserify via the `browser` property (making browserify use substitutes instead of the original node dependencies)
-* [Mocha](http://visionmedia.github.io/mocha/) tests for the module to verify that the module works correctly in Node.js
+* [Mocha](http://mochajs.org/) tests for the module to verify that the module works correctly in Node.js
 * An HTML test runner to also run the same Mocha tests (browserified) in any browser
 * A shell script to browserify the module and the tests _without_ Grunt
 * Example HTML pages that demonstrate how to include the browserified module in other projects
